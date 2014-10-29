@@ -8,10 +8,11 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         watch: {
             src: {
-                files: [newsletter],
+                files: [newsletter, 'src/css/newsletter.css'],
                 options: {
                     livereload: true
-                }
+                },
+                tasks: ['uncss:dist', 'inline:dist', 'copy:main']
             }
         },
         copy: {
@@ -23,7 +24,7 @@ module.exports = function(grunt) {
             server: {
                 options: {
                     open: {
-                        target: 'http://localhost:8000/src' // target url to open
+                        target: 'http://localhost:8000/dist' // target url to open
                     },
                     port: 8000
                 }
