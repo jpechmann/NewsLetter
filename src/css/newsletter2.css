@@ -1,0 +1,35 @@
+#outlook a {padding:0;}
+a:link {color:#00898B;}      /* unvisited link */
+a:visited {color:#00898B;}  /* visited link */
+a:hover {color:#006C79;}  /* mouse over link */
+a:active {color:#00898B;}  /* selected link */
+a {text-decoration: none;}
+a img {border:none;} 
+body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} 
+.ExternalClass {width:100%;}
+#backgroundTable {margin:0; padding:0; width:100% !important; }
+img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; display:block;} 
+span.yshortcuts { color:#000; background-color:none; border:none;}
+span.yshortcuts:hover,
+span.yshortcuts:active,
+span.yshortcuts:focus {color:#000; background-color:none; border:none;}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) 
+{
+        .appleLinks a {color:#999999; text-decoration: none;}
+
+    /* layout */
+
+        *[class=hide] { display: none !important; }
+        *[class=tableWide] { width: 340px; !important; }
+        *[class=table] { width: 320px; !important; }
+        *[class=image] { width: 100%; }
+        *[class=td334] { width: 93%; }
+        *[class=td334left] { width: 100%; padding-left: 2px; }
+        *[class=td334right] { width: 100%; padding-right: 2px; }
+        *[class=heightHalf] { height: 15px; }
+        *[class=td330] { width: 95%; }
+        *[class=td215] { width: 180px; }
+        *[class=td310] { width: 93%; }
+        *[class=logo] { width: 100%; }
+        *[class=logo2] { padding-top: 10px; }
+}
