@@ -26,6 +26,19 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        compress: {
+            main: {
+                options: {
+                    archive: '/dist.zip'
+                },
+                files: [{
+                    src: ["**"],
+                    dest: './',
+                    cwd: 'dist/',
+                    expand: true
+                }]
+            }
+        },
         connect: {
             server: {
                 options: {
@@ -88,6 +101,7 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('publish', [
+        'compress:main',
         'gh-pages'
     ]);
 };
