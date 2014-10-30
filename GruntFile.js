@@ -29,12 +29,12 @@ module.exports = function(grunt) {
         compress: {
             main: {
                 options: {
-                    archive: '/dist.zip'
+                    archive: 'dist.zip'
                 },
                 files: [{
+                    cwd: 'dist/',
                     src: ["**"],
                     dest: './',
-                    cwd: 'dist/',
                     expand: true
                 }]
             }
