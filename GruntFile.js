@@ -17,7 +17,13 @@ module.exports = function(grunt) {
         },
         copy: {
             main: {
-                files: [{expand: true, cwd: 'src/', src: ['images/*'], dest: 'dist/', filter: 'isFile'}]
+                files: [{
+                    expand: true,
+                    cwd: 'src/',
+                    src: ['images/*'],
+                    dest: 'dist/',
+                    filter: 'isFile'
+                }]
             }
         },
         connect: {
@@ -55,6 +61,12 @@ module.exports = function(grunt) {
                     'dist/css/tidy.css': newsletter
                 }
             }
+        },
+        'gh-pages': {
+            options: {
+                base: 'dist'
+            },
+            src: ['**']
         }
     });
 
@@ -73,5 +85,9 @@ module.exports = function(grunt) {
         'copy:main',
         'connect:server',
         'watch'
+    ]);
+
+    grunt.registerTask('publish', [
+        'gh-pages'
     ]);
 };
